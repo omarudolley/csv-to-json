@@ -14,9 +14,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
       # Runs a set of commands using the runners shell
+    - name: Install Poetry
+      uses: snok/install-poetry@v1
     - name: Install dependencies
-      run: |
-        curl -sSL https://install.python-poetry.org | python3 -
-        poetry install
+      run: poetry install
     - name: Run pytest
       run: poetry run pytest 
