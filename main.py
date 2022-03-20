@@ -24,7 +24,7 @@ def generate_json_file(content, output_dir, output_file_name):
 
     json_file = output_path / output_file_name
     json_file.write_text(
-        json.dumps(content, indent=2, ensure_ascii=False, sort_keys=True),
+        json.dumps(content, indent=2, ensure_ascii=False, sort_keys=True) + "\n",
         encoding="utf-8",
     )
 
