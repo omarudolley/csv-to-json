@@ -1,6 +1,7 @@
 import csv
 import json
 from pathlib import Path
+from re import sub
 from typing import List
 
 import typer
@@ -8,17 +9,22 @@ import typer
 app = typer.Typer()
 
 
+def camel_case(s):
+    s = sub(r"(_|-)+", " ", s).title().replace(" ", "")
+    return "".join([s[0].lower(), s[1:]])
+
+
 def parse_csv_file(file: Path) -> List:
     result = []
     with file.open(mode="r", encoding="utf-8") as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
-            result.append(row)
+            camel_case_key_row = {camel_case(k): v for k, v in row.items()}
+            result.append(camel_case_key_row)
     return result
 
 
 def generate_json_file(content, output_dir, output_file_name):
-
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
 

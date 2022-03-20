@@ -1,22 +1,22 @@
 [
   {
-    "email": "sarah@example.com",
-    "id": "1",
-    "name": "Sarah"
+    "emailAddress": "sarah@example.com",
+    "firstName": "Sarah",
+    "id": "1"
   },
   {
-    "email": "lisa@example.com",
-    "id": "2",
-    "name": "Lisa"
+    "emailAddress": "lisa@example.com",
+    "firstName": "Lisa",
+    "id": "2"
   },
   {
-    "email": "sam@example.com",
-    "id": "3",
-    "name": "Sam"
+    "emailAddress": "sam@example.com",
+    "firstName": "Sam",
+    "id": "3"
   },
   {
-    "email": "jon@example.com",
-    "id": "4",
-    "name": "Jon"
+    "emailAddress": "jon@example.com",
+    "firstName": "Jon",
+    "id": "4"
   }
 ]

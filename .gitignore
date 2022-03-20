@@ -111,3 +111,6 @@ artifacts
 
 .vscode
 secrets-file
+
+# import files
+*.csv
